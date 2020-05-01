@@ -2,8 +2,27 @@ import React, { Component } from 'react';
 import Home from './HomeComponent';
 import Bodywork from './BodyworkComonent';
 import ServiceInfo from './ServiceInfoComponent';
+import About from './AboutComponent';
+import Contact from './ContactComponent';
 import { View, Platform } from 'react-native';
 import { createStackNavigator, createDrawerNavigator } from 'react-navigation';
+
+const HomeNavigator = createStackNavigator(
+    {
+        Home: { screen: Home },
+    },
+    {
+        navigationOptions: {
+            headerStyle: {
+                backgroundColor: '#05668D'
+            },
+            headerTintColor: '#FFF',
+            headerTitleStyle: {
+                color: '#FFF'
+            }
+        }
+    }
+);
 
 const BodyworkNavigator = createStackNavigator(
     {
@@ -24,11 +43,30 @@ const BodyworkNavigator = createStackNavigator(
     }
 );
 
-const HomeNavigator = createStackNavigator(
+const AboutNavigator = createStackNavigator(
     {
-        Home: { screen: Home },
+        About: { screen: About }
     },
     {
+        initialRouteName: 'About',
+        navigationOptions: {
+            headerStyle: {
+                backgroundColor: '#05668D'
+            },
+            headerTintColor: '#FFF',
+            headerTitleStyle: {
+                color: '#FFF'
+            }
+        }
+    }
+);
+
+const ContactNavigator = createStackNavigator(
+    {
+        Contact: { screen: Contact }
+    },
+    {
+        initialRouteName: 'Contact',
         navigationOptions: {
             headerStyle: {
                 backgroundColor: '#05668D'
@@ -44,7 +82,9 @@ const HomeNavigator = createStackNavigator(
 const MainNavigator = createDrawerNavigator(
     {
         Home: { screen: HomeNavigator },
-        Bodywork: { screen: BodyworkNavigator }
+        Bodywork: { screen: BodyworkNavigator },
+        About: { screen: AboutNavigator },
+        Contact: { screen: ContactNavigator }
     },
     {
         drawerBackgroundColor: '#67B3C6',

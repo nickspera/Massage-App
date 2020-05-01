@@ -1,4 +1,4 @@
-export const COMMENTS = 
+export const REVIEWS = 
 [
     {
         id: 0,

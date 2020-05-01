@@ -9,7 +9,7 @@ function RenderItem({item}) {
         return (
             <Card
                 featuredTitle={item.name}
-                image={require('./images/massage001.jpg')}>
+                image={require('./images/massage-service.jpg')}>
                 <Text
                     style={{margin: 10}}>
                         {item.description}

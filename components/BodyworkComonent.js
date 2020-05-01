@@ -24,7 +24,7 @@ class Bodywork extends Component {
                         title={item.name}
                         subtitle={item.description}
                         onPress={() => navigate('ServiceInfo', {serviceId: item.id})}
-                        leftAvatar={{ source: require('./images/massage001.jpg')}}
+                        leftAvatar={{ source: require('./images/massage-service.jpg')}}
                     />
                 );
         };
